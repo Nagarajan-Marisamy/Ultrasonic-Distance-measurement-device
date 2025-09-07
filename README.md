@@ -1,84 +1,63 @@
 # Ultrasonic Distance Measurement Device  
 
-This project is a **distance measurement device** built using an **Arduino Uno**, **HC-SR04 Ultrasonic Sensor**, and an **OLED display**. It can measure the distance of objects in real-time and display the values on the OLED screen. A push button allows users to switch between different distance units (**centimeters, inches, meters, and feet**).  
+This project is a simple distance measurement system built using **Arduino Uno**, **HC-SR04 ultrasonic sensor**, and an **OLED display**. It measures the distance of an object in real time and allows the user to switch between units (cm, inches, meters, feet) using a push button.  
 
 ---
 
-## 📌 Features  
+🚀 Features  
 - Real-time distance measurement  
-- Unit conversion: cm, inches, meters, feet  
-- Compact OLED display interface  
-- Easy to build and beginner-friendly  
-- Suitable for robotics, obstacle detection, and educational projects  
+- Supports 4 units: centimeters, inches, meters, feet  
+- OLED display for clear output  
+- Push button for easy unit switching  
+- Beginner-friendly and compact design  
 
 ---
 
-## 🛠️ Components Required  
+🧰 Components Used  
 - Arduino Uno  
 - HC-SR04 Ultrasonic Sensor  
-- OLED Display (I2C – GND, VCC, SCL, SDA)  
+- OLED Display (I2C – 128×64)  
 - Push Button  
-- Jumper Wires  
-- Breadboard or PCB  
+- Breadboard & Jumper Wires  
 
 ---
 
-## ⚡ Circuit Connections  
+🔧 How to Build  
+1. Connect components as per the circuit table:  
 
-| Component             | Arduino Uno Pin |
-|------------------------|-----------------|
-| HC-SR04 VCC           | 5V              |
-| HC-SR04 GND           | GND             |
-| HC-SR04 Trigger       | D9              |
-| HC-SR04 Echo          | D10             |
-| OLED VCC              | 5V              |
-| OLED GND              | GND             |
-| OLED SCL              | A5 (SCL)        |
-| OLED SDA              | A4 (SDA)        |
-| Push Button           | D2              |
+| Component       | Arduino Pin |
+|-----------------|-------------|
+| HC-SR04 VCC     | 5V          |
+| HC-SR04 GND     | GND         |
+| HC-SR04 Trigger | D9          |
+| HC-SR04 Echo    | D10         |
+| OLED VCC        | 5V          |
+| OLED GND        | GND         |
+| OLED SCL        | A5 (SCL)    |
+| OLED SDA        | A4 (SDA)    |
+| Push Button     | D2          |
 
----
-
-## 🔧 Working Principle  
-1. The **HC-SR04 ultrasonic sensor** sends ultrasonic pulses.  
-2. The pulses reflect back from an object and are received by the sensor.  
-3. Arduino calculates the distance using the **time of flight** of the pulse.  
-4. The calculated distance is displayed on the **OLED screen**.  
-5. The **push button** cycles through different units of measurement.  
+2. Upload the Arduino code to the Uno.  
+3. Power the device and observe distance readings on the OLED.  
+4. Press the button to cycle between units (cm → in → m → ft).  
 
 ---
 
-## 📜 Formula Used  
-Distance is calculated using the speed of sound:  
-
-\[
-\text{Distance (cm)} = \frac{\text{Time (µs)} \times 0.034}{2}
-\]
-
----
-
-## 🚀 Applications  
-- Obstacle detection in robotics  
-- Smart assistance for visually impaired persons  
-- Parking assistance systems  
-- Distance monitoring in automation systems  
-- Educational electronics projects  
+📂 Files Included  
+File             | Description  
+-----------------|----------------------------------------  
+`Ultrasonic_Distance.ino` | Arduino code for distance measurement and unit conversion  
+`README.md`      | Project documentation  
+`/images`        | Circuit diagram & prototype images (optional)  
 
 ---
 
-## 📷 Images / Circuit Diagram  
-(Add images of your circuit and setup here once available)  
+📝 Notes  
+- Works best for distances between **2 cm and 400 cm** (HC-SR04 range).  
+- Ensure the sensor is placed facing the object directly for accurate readings.  
+- Can be extended for robotics, obstacle detection, and assistive devices.  
 
 ---
 
-## 📂 Repository Contents  
-- `README.md` → Documentation  
-- `/images` → Circuit diagram, prototype pictures (optional)  
-
----
-
-## 🏆 Author  
-Developed by **Nagarajan** ✨  
-Diploma in Electronics & Communication Engineering 
-
----
+📄 License  
+This project is open-source and free to use under the MIT License.  
